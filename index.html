@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DB - Aktien & Nachrichtenbeobachtung</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>DB - Aktien & Nachrichtenbeobachtung</h1>
+            <ul>
+                <li><a href="#finance-section">Aktien</a></li>
+                <li><a href="#news-section">Nachrichten</a></li>
+            </ul>
+        </nav>
+        <p>Aktuelle Aktienkurse, Charts und Wirtschaftsnachrichten</p>
+    </header>
+
+    <div class="container">
+        <section id="finance-section">
+            <h2>Aktuelle Aktienkurse</h2>
+            <div class="input-group">
+                <input type="text" id="stock-symbol" placeholder="Gib ein Aktien-Symbol ein (z.B. AAPL)">
+                <button id="get-stock-data">Daten abrufen</button>
+                <button id="clear-stock-data">Zurücksetzen</button>
+            </div>
+            <div id="stock-data" class="data-container">
+                <div id="stock-loading" class="spinner hidden"></div>
+            </div>
+            <div id="stock-chart" class="chart-container"></div>
+        </section>
+
+        <section id="news-section">
+            <h2>Aktuelle Wirtschaftsnachrichten</h2>
+            <div id="news-articles" class="news-container">
+                <div id="news-loading" class="spinner hidden"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 DB - Aktien & Nachrichtenbeobachtung</p>
+    </footer>
+
+    <script defer src="https://s3.tradingview.com/tv.js"></script>
+    <script defer src="app.js"></script>
+</body>
+</html>
